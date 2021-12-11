@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Inicializando o Ambiente
+    
     runs-on: ubuntu-latest
 	
     steps:
