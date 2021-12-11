@@ -26,6 +26,12 @@ jobs:
       - run: npm run report:merge
       - run: npm run report:mocha
 
+      - name: Upload a Build Artifact
+        if: always()
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          path: cypress/videos
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.7
         with:
