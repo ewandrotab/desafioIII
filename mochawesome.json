@@ -1,0 +1,202 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-12-11T13:57:28.449Z",
+    "end": "2021-12-11T13:57:35.093Z",
+    "duration": 6644,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8fa6e88b-8c77-4722-9806-ff5a4c04ae4b",
+      "title": "",
+      "fullFile": "cypress/tests/ui-sign-in.spec.js",
+      "file": "cypress/tests/ui-sign-in.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "075b04dd-b872-4af0-8ba6-e1f21f1d047f",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Quando informar email e senha válidos, deve acessar",
+              "fullTitle": "Login Quando informar email e senha válidos, deve acessar",
+              "timedOut": null,
+              "duration": 3032,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept({\n  method: 'POST',\n  url: 'https://api.realworld.io/api/users/login'\n}, {\n  statusCode: 200,\n  fixture: 'login-com-sucesso.json'\n}).as('postUser');\n_signin.default.preencherFormulario('chapterv@mail.com', 'pwd123');\n_signin.default.submeterFormulario();\n_signin.default.validarLoginComSucesso();",
+              "err": {},
+              "uuid": "82812a0a-5948-43b7-b7ee-708f8db4da36",
+              "parentUUID": "075b04dd-b872-4af0-8ba6-e1f21f1d047f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Quando não informar usuário e senha, deve exibir mensagem: email can't be blank",
+              "fullTitle": "Login Quando não informar usuário e senha, deve exibir mensagem: email can't be blank",
+              "timedOut": null,
+              "duration": 283,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept({\n  method: 'POST',\n  url: 'https://api.realworld.io/api/users/login'\n}, {\n  statusCode: 422,\n  fixture: 'login-sem-informar-email-senha.json'\n}).as('postUser');\n_signin.default.submeterFormulario();\n_signin.default.validarLoginSemSucesso(\"email can't be blank\");",
+              "err": {},
+              "uuid": "7a6f926c-b89d-4b62-9ef4-b16f75198a7b",
+              "parentUUID": "075b04dd-b872-4af0-8ba6-e1f21f1d047f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Quando informar email válido e senha inválida, deve exibir mensagem: email or password is invalid",
+              "fullTitle": "Login Quando informar email válido e senha inválida, deve exibir mensagem: email or password is invalid",
+              "timedOut": null,
+              "duration": 951,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept({\n  method: 'POST',\n  url: 'https://api.realworld.io/api/users/login'\n}, {\n  statusCode: 403,\n  fixture: 'login-com-senha-invalida.json'\n}).as('postUser');\n_signin.default.preencherFormulario('chapterv@mail.com', 'SenhaInvalida');\n_signin.default.submeterFormulario();\n_signin.default.validarLoginSemSucesso(\"email or password is invalid\");",
+              "err": {},
+              "uuid": "28062e36-d7d8-4352-a261-3345596dc85c",
+              "parentUUID": "075b04dd-b872-4af0-8ba6-e1f21f1d047f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Quando informar email inválido e senha válida, deve exibir mensagem: email or password is invalid",
+              "fullTitle": "Login Quando informar email inválido e senha válida, deve exibir mensagem: email or password is invalid",
+              "timedOut": null,
+              "duration": 958,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept({\n  method: 'POST',\n  url: 'https://api.realworld.io/api/users/login'\n}, {\n  statusCode: 403,\n  fixture: 'login-com-usuario-invalido.json'\n}).as('postUser');\n_signin.default.preencherFormulario('usuarioinvalido@mail.com', 'pwd123');\n_signin.default.submeterFormulario();\n_signin.default.validarLoginSemSucesso('email or password is invalid');",
+              "err": {},
+              "uuid": "33661b44-73ff-4afa-81bc-fb293ac9a26e",
+              "parentUUID": "075b04dd-b872-4af0-8ba6-e1f21f1d047f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Quando não informar email e informar a senha, deve exibir mensagem: email can't be blank",
+              "fullTitle": "Login Quando não informar email e informar a senha, deve exibir mensagem: email can't be blank",
+              "timedOut": null,
+              "duration": 570,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept({\n  method: 'POST',\n  url: 'https://api.realworld.io/api/users/login'\n}, {\n  statusCode: 422,\n  fixture: 'login-sem-informar-email.json'\n}).as('postUser');\ncy.get('input[placeholder=\"Password\"]').type('pwd123');\n_signin.default.submeterFormulario();\n_signin.default.validarLoginSemSucesso(\"email can't be blank\");",
+              "err": {},
+              "uuid": "4be08aaa-d542-4f9c-a5a9-66b9e02f1303",
+              "parentUUID": "075b04dd-b872-4af0-8ba6-e1f21f1d047f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Quando informar o email e não informar a senha, deve exibir mensagem: password can't be blank",
+              "fullTitle": "Login Quando informar o email e não informar a senha, deve exibir mensagem: password can't be blank",
+              "timedOut": null,
+              "duration": 772,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept({\n  method: 'POST',\n  url: 'https://api.realworld.io/api/users/login'\n}, {\n  statusCode: 422,\n  fixture: 'login-sem-informar-senha.json'\n}).as('postUser');\ncy.get('input[placeholder=\"Email\"]').type('abobrinhav@mail.com');\n_signin.default.submeterFormulario();\n_signin.default.validarLoginSemSucesso(\"password can't be blank\");",
+              "err": {},
+              "uuid": "8650cacd-18a9-492a-aeda-cb18339f4b2e",
+              "parentUUID": "075b04dd-b872-4af0-8ba6-e1f21f1d047f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "82812a0a-5948-43b7-b7ee-708f8db4da36",
+            "7a6f926c-b89d-4b62-9ef4-b16f75198a7b",
+            "28062e36-d7d8-4352-a261-3345596dc85c",
+            "33661b44-73ff-4afa-81bc-fb293ac9a26e",
+            "4be08aaa-d542-4f9c-a5a9-66b9e02f1303",
+            "8650cacd-18a9-492a-aeda-cb18339f4b2e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6566,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
