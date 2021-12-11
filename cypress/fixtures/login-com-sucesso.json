@@ -1,0 +1,9 @@
+{
+    "user": {
+        "email": "abobrinha@mail.com",
+        "username": "abobrinha",
+        "bio": null,
+        "image": null,
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlc2FmaW92QG1haWwuY29tIiwidXNlcm5hbWUiOiJkZXNhZmlvdiIsInBhc3N3b3JkIjoiJDJhJDEwJFpUb0xKc1RpVEZMcmJKckRoaS5hTi4wVVdLUVlLOWVRL3E0ZUtzYmx5TTNBdGJpS2dOcC5hIiwiYmlvIjpudWxsLCJpbWFnZSI6Imh0dHBzOi8vYXBpLnJlYWx3b3JsZC5pby9pbWFnZXMvc21pbGV5LWN5cnVzLmpwZWciLCJpYXQiOjE2MzkyMjUwNzksImV4cCI6MTY0NDQwOTA3OX0.rlRzf1WaIdZR7RF7B8QEsdTW_8tX4qM55rd9kn1hEDU"
+    }
+}

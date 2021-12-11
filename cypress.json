@@ -1,0 +1,11 @@
+{
+    "$schema": "https://on.cypress.io/cypress.schema.json",
+    "baseUrl": "https://demo.realworld.io/#/",
+    "integrationFolder": "cypress/tests",
+
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "configFile": "reporter-config.json"
+    }
+
+}
