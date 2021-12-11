@@ -7,7 +7,7 @@ describe('Login', () => {
     beforeEach(() => {
         cy.visit('login')
     });
-
+   
     it('Quando informar email e senha válidos, deve acessar', () => {
         
         cy.intercept({
