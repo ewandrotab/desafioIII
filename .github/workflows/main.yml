@@ -9,7 +9,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Baixando o código fonte
       - uses: actions/checkout@v2
 
       - name: Preparando a versão especificada do Node.js
@@ -17,14 +16,11 @@ jobs:
         with:
           node-version: 14.x
 
-      - name: Instalando as dependências do projeto
       - run: npm install
 
-      - name: Executando os Testes
       - run: npm run cy:run
         continue-on-error: true # configuração para que os testes continuem rodando mesmo que algum cenário falhe
 
-      - name: Preparando e gerando os relatórios de execução dos testes
       - run: npm run report:merge
       - run: npm run report:mocha
 
